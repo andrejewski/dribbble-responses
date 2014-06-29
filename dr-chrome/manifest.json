@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Dribbble Responses",
+	"version": "1.0",
+	"description": "Hides short, useless comments on Dribbble shots.",
+	"options_page": "options.html",
+	"permissions": ["storage"],
+	"icons": {
+		"48": "icon48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://dribbble.com/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
